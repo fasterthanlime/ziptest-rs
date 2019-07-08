@@ -1,0 +1,25 @@
+[package]
+name = "ziptest"
+version = "0.1.0"
+authors = ["Amos Wenger <amoswenger@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+wasm-bindgen = "0.2.47"
+console_error_panic_hook = "0.1.6"
+wasm-logger = "0.1.5"
+log = "0.4.6"
+js-sys = "0.3.24"
+humansize = "1.1.0"
+
+[dependencies.web-sys]
+version = "0.3.24"
+features = ["File", "FileList", "FileReader", "Blob", "Document", "Element", "Window"]
+
+[dependencies.zip]
+version = "0.5.2"
+default-features = false
+features = ["deflate"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
